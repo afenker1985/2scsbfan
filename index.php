@@ -4,21 +4,21 @@ require 'Slim/autoload.php';
 $app = new \Slim\Slim();
 
 $app->get('/', function () {
-	readfile('header.php');
-	readfile('welcome.php');
-	readfile('footer.php');
+	include 'header.php';
+	include 'welcome.php';
+	include 'footer.php';
 });
 
 $app->get('/albums', function () {
-	readfile('header.php');
+	include 'header.php';
 	
-	readfile('footer.php');
+	include 'footer.php';
 });
 
 $app->get('/links', function () {
-	readfile('header.php');
+	include 'header.php';
 	
-	readfile('footer.php');
+	include 'footer.php';
 });
 
 $app->run();
