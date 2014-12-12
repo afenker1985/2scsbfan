@@ -40,7 +40,7 @@
 
             <ul id="menu">
 	            <li class="current"><a href="index.htm">Home</a></li>
-	            <li><a href="#">Albums</a>
+	            <li><a href="/albums">Albums</a>
                   <ul>
                      <li><a href="#"><span>- </span>Southern Soldier</a></li>
                      <li><a href="#"><span>- </span>Hard Road</a></li>
