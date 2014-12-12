@@ -1,9 +1,17 @@
 <?php
-$db = new SQLite3('2scsb.db');
+class MyDB extends SQLite3
+{
+   function __construct()
+   {
+      $this->open('2scsb.db');
+   }
+}
 
-$results = $db->query('SELECT slug FROM albums');
+$db = new MyDB();
 
-while ($row = $results->fetchArray()) {
-    var_dump($row);
+if(!$db){
+   echo $db->lastErrorMsg();
+} else {
+   echo "Opened database successfully\n";
 }
 ?>
