@@ -22,7 +22,7 @@ EOF;
 		if(!$result){
 		   echo $db->lastErrorMsg();
 		} else {
-			echo "Query run properly";
+			print_r($result->fetchArray());
 		}
 	
 		$db->close();
