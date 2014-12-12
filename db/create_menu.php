@@ -4,12 +4,11 @@
 	   function __construct()
 	   {
 	      $this->open('2scsb.db');
+		  $this->lastErrorMsg();
 	   }
 	}
 
 	$db = new MyDB();
-	
-	print_r($db);
 
 	if(!$db){
 	   echo $db->lastErrorMsg();
