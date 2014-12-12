@@ -13,7 +13,7 @@
 	   echo $db->lastErrorMsg();
 	} else {
 		$sql =<<<EOF
-			SELECT slug FROM albums WHERE is_active=1;
+			SELECT slug FROM 2scsb.albums WHERE is_active=1;
 EOF;
 
 	$result = $db->query($sql);
