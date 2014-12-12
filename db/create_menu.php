@@ -4,7 +4,7 @@
 	   function __construct()
 	   {
 	      $this->open('2scsb.db');
-		  $this->lastErrorMsg();
+		  
 	   }
 	}
 
