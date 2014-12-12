@@ -11,6 +11,7 @@ $db = new MyDB();
 
 $result = $db->query('SELECT * FROM albums WHERE is_active = 1 ORDER BY release_date ASC');
 
+echo "PASS";
 print_r($result);
 
 ?>
