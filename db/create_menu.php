@@ -7,7 +7,7 @@
 	   }
 	}
 
-	$db = new MyDB();
+	var_dump($db = new MyDB());
 
 	if(!$db){
 	   echo $db->lastErrorMsg();
