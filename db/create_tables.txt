@@ -1,0 +1,14 @@
+CREATE TABLE albums
+(album_id INT(11) PRIMARY KEY NOT NULL,
+slug VARCHAR(20) NOT NULL,
+title VARCHAR(100) NOT NULL,
+sub_title VARCHAR(100),
+artist VARCHAR(100) NOT NULL,
+tracks INT(11) NOT NULL,
+copyright YEAR(4) NOT NULL,
+label VARCHAR(100) NOT NULL,
+release_date DATE NOT NULL,
+total_length INT(11) NOT NULL,
+is_active INT(1) default 1,
+creation_date TIMESTAMP default '0000-00-00 00:00:00' NOT NULL,
+last_modified TIMESTAMP default CURRENT_TIMESTAMP NOT NULL);
