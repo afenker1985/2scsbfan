@@ -52,7 +52,6 @@ header {
 #sidebar { color: #8b8b8b; }
 footer {
    position: relative;
-   min-height: 300px;
    margin-top: 66px !important;
    margin-bottom: 60px !important;
 }
@@ -278,7 +277,7 @@ header #nav-wrap {
 
 #latest-article {
    margin-top: 54px;
-
+	min-height: 300px;
    /* 5px padding + 1px bottom border = 6px */
    padding-bottom: 5px;
    border-bottom: 1px solid #e4e3e3;
