@@ -3,7 +3,7 @@
    <!-- footer
    ================================================== -->
    <footer class="container">
-		  All information on 2scsbfan.info is © <? echo date("Y"); ?>, and may not be reproduced without permission. Ownership of lyrics, perfomances, or album artwork is retained by all respective owners and not 2scsbfan.info. All liability for misuse of the information provided rests solely with the user, and not with 2scsbfan.info or its webmaster. 
+		  All information on 2scsbfan.info is © <?=date("Y"); ?>, and may not be reproduced without permission. Ownership of lyrics, perfomances, or album artwork is retained by all respective owners and not 2scsbfan.info. All liability for misuse of the information provided rests solely with the user, and not with 2scsbfan.info or its webmaster. 
       <!-- footer-bottom
       ================================================== -->
       <div id="footer-bottom" class="grid12 first">
