@@ -50,7 +50,7 @@
 					 <li><a href="#"><span>- </span>Strike the Tent!</a></li>
                   </ul>
                </li>
-			   <li><a href="#">Links</a></li>
+			   <li><a href="/links">Links</a></li>
 	           <li><a href="#">About</a></li>
 			   <li><a href="#">Contact</a></li>
             </ul> <!-- end #menu -->

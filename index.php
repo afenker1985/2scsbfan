@@ -15,6 +15,12 @@ $app->get('/albums', function () {
 	readfile('footer.php');
 });
 
+$app->get('/links', function () {
+	readfile('header.php');
+	
+	readfile('footer.php');
+});
+
 $app->run();
 
 ?>
