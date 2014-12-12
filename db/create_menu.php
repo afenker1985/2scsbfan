@@ -3,7 +3,7 @@
 	{
 	   function __construct()
 	   {
-	      $this->open('2scsb.db');
+	      $this->open($_ENV['OPENSHIFT_DATA_DIR'] . '/2scsb.db');
 		  
 	   }
 	}
