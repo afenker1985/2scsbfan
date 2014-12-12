@@ -9,7 +9,7 @@
 /*----------------------------------------------------*/
 /*	Back To Top Button
 /*----------------------------------------------------*/
-		var pxShow = 300;//height on which the button will show
+		var pxShow = 200;//height on which the button will show
 		var fadeInTime = 400;//how slow/fast you want the button to show
 		var fadeOutTime = 400;//how slow/fast you want the button to hide
 		var scrollSpeed = 300;//how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
