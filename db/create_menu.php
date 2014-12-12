@@ -9,7 +9,7 @@ class MyDB extends SQLite3 {
 
 $db = new SQLite3('2scsb.db');
 
-$result = $db->query('SELECT * FROM albums WHERE is_active = 1 ORDER BY release_date ASC');
+$result = $db->query('SELECT slug FROM albums WHERE is_active = 1 ORDER BY release_date ASC');
 
 echo "PASS";
 var_dump($result);
