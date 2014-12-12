@@ -13,17 +13,17 @@
 	   echo $db->lastErrorMsg();
 	} else {
 		$sql =<<<EOF
-			SELECT slug FROM 2scsb.albums WHERE is_active=1;
+			SELECT slug FROM albums WHERE is_active=1;
 EOF;
 
-	$result = $db->query($sql);
+		$result = $db->query($sql);
 	
-	if(!$result){
-	   echo $db->lastErrorMsg();
-	} else {
-		echo "Query run properly";
+		if(!$result){
+		   echo $db->lastErrorMsg();
+		} else {
+			echo "Query run properly";
+		}
+	
+		$db->close();
 	}
-	
-	$db->close();
-}
 ?>
