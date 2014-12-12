@@ -39,7 +39,7 @@
          <nav id="nav-wrap" class="cf">
 
             <ul id="menu">
-	            <li class="current"><a href="index.htm">Home</a></li>
+	            <li class="current"><a href="/">Home</a></li>
 	            <li><a href="/albums">Albums</a>
                   <ul>
                      <li><a href="#"><span>- </span>Southern Soldier</a></li>
