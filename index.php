@@ -18,7 +18,7 @@ $app->get('/albums', function () {
 
 $app->get('/links', function () {
 	include 'header.php';
-	
+	include 'links.php';
 	include 'footer.php';
 });
 
