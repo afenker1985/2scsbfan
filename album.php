@@ -16,6 +16,7 @@
 			  </div>
 			  <div class="track_info">
 				  <? $tracks = $scsb->track_list($id); ?>
+				  <?=$tracks?>
 			  </div>
 		  </div>
 	  </article>
