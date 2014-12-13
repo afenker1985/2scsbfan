@@ -14,7 +14,7 @@
 	   echo $db->lastErrorMsg();
 	} else {
 		$sql =<<<EOF
-			SELECT slug FROM albums WHERE is_active=1;
+			SELECT slug, title FROM albums WHERE is_active=1;
 EOF;
 
 		$result = $db->query($sql);
@@ -22,6 +22,11 @@ EOF;
 		if(!$result){
 		   echo $db->lastErrorMsg();
 		} else {
+			$album_list = '';
+			foreach ($result as $row) {
+				$album_list .= '<li><a href="/albums/' . $row[0] . '"><span>- </span>' . $row[2] . '</a></li>'
+			}
+			print_r($album_list);
 			print_r($result->fetchArray());
 		}
 	
