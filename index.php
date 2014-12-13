@@ -17,7 +17,7 @@ $app->get('/links', function () {
 	include 'footer.php';
 });
 
-$app->get('/ablum/*', function () {
+$app->get('/album/*', function () {
 	echo "PASS";
 });
 
