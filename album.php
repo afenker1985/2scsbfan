@@ -1,4 +1,4 @@
-<? include $path . 'album_info.php'; ?>
+<? include $path . 'db/album_info.php'; ?>
 	<article id="latest-article" class="container" style="min-height: 400px;">
 		  <h2><?=$row['title']?></h2>
 		  <div class="dcontentc cf">
