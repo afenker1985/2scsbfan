@@ -54,7 +54,10 @@
 			$t = '';
 			foreach($track_list as $track) {
 				$track['song_length'] = gmdate("i:s", $track['song_length']);
-				$t .= $track['track_number'] . " " . $track['title'] . " " . $track['song_length'] . "<br />";
+				$t .=<<<EOHTML
+					{$track['track_number']} {$track['title']} {$track['song_length']}
+				<br />
+EOHTML;
 			}
 			
 			return $t;
