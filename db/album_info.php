@@ -13,6 +13,8 @@
 		} else {
 			$row=$result->fetchArray(SQLITE3_ASSOC);
 			
+			echo intval(gmdate("g", $row['total_length']));
+			
 			if (intval(gmdate("g", $row['total_length'])) >= 1) {
 				$t_length = gmdate("g:i:s", $row['total_length']);
 			} else {
