@@ -49,12 +49,7 @@
 	            <li class="current"><a href="/">Home</a></li>
 	            <li><a href="#">Albums</a>
                   <ul>
-                     <li><a href="#"><span>- </span>Southern Soldier</a></li>
-                     <li><a href="#"><span>- </span>Hard Road</a></li>
-                     <li><a href="#"><span>- </span>In High Cotton</a></li>
-					 <li><a href="#"><span>- </span>Dulcem Melodies</a></li>
-					 <li><a href="#"><span>- </span>Lightning in a Jar</a></li>
-					 <li><a href="#"><span>- </span>Strike the Tent!</a></li>
+                     <?=$album_list?>
                   </ul>
                </li>
 			   <li><a href="/links">Links</a></li>

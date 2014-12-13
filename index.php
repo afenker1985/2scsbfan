@@ -17,6 +17,10 @@ $app->get('/links', function () {
 	include 'footer.php';
 });
 
+$app->get('/ablum/*', function () {
+	echo "PASS";
+});
+
 $app->run();
 
 ?>
