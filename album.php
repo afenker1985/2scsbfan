@@ -17,7 +17,6 @@
 <style>
   .accordion-toggle {cursor: pointer;}
   .accordion-content {display: none;}
-  .accordion-content.default {display: block;}
 </style>
 <?php $album = $scsb->album_info($id); ?>
 	<article id="latest-article" class="container" style="min-height: 400px;">
@@ -36,7 +35,7 @@
 				  <strong>Copyright:</strong> <?=$album['copyright']?>, <?=$album['artist']?>
 			  </div>
 			  <div class="track_info">
-				  <div id="accordion" style="display: inline-block; text-align: left;">
+				  <div id="accordion">
 					  <?=$scsb->track_list($id)?>
 				  </div>
 			  </div>
