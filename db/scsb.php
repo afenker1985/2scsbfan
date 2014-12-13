@@ -8,8 +8,6 @@
 		}
 		
 		public function album_info($id) {
-			echo "PASS 1";
-			echo $id;
 			if(!$this->db){
 			   echo $this->db->lastErrorMsg();
 			} else {
