@@ -17,8 +17,8 @@ $app->get('/links', function () {
 	include 'footer.php';
 });
 
-$app->get('/albums/*', function () {
-	echo "PASS";
+$app->get('/albums/:id', function ($id) {
+	echo $id;
 });
 
 $app->run();
