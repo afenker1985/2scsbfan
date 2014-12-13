@@ -40,15 +40,13 @@
 			$result = $this->db->query("SELECT album_id FROM albums WHERE slug='" . $id . "'");
 			
 			$album_id = $result->fetchArray(SQLITE3_ASSOC);
-						
-			echo $album_id['album_id'];
 			
 			$result = $this->db->query("SELECT * FROM album_songs WHERE album_id=" . $album_id['album_id']);
 			$track_list = array();
-			$i = 0;
+			$i = 1;
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 				
-				$r = $this->db->query('SELECT title, track_number, song_length FROM songs WHERE song_id=' . $row['song_id']);
+				$r = $this->db->query('SELECT title, song_length FROM songs ORDER BY track_number ASC WHERE song_id=' . $row['song_id']);
 				
 				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);				
 				$i++;
