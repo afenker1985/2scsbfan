@@ -18,7 +18,7 @@
 			if ($length == 1 || $length == 2) {
 				$t_length = gmdate("g:i:s", $album['total_length']);
 			} else {
-				$t_length = gmdate("g:i:s", $album['total_length']);
+				$t_length = gmdate("i:s", $album['total_length']);
 			}
 			
 		}
