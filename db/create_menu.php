@@ -14,7 +14,7 @@
 	   echo $db->lastErrorMsg();
 	} else {
 
-		$result = $db->query('SELECT slug, title FROM albums');
+		$result = $db->query('SELECT * FROM albums');
 	
 		if(!$result){
 		   echo $db->lastErrorMsg();
