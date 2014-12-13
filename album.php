@@ -14,5 +14,8 @@
 				  <br />
 				  <strong>Copyright:</strong> <?=$album['copyright']?>, <?=$album['artist']?>
 			  </div>
+			  <div class="track_info">
+				  
+			  </div>
 		  </div>
 	  </article>

@@ -50,10 +50,11 @@ header {
 }
 #main { }
 #sidebar { color: #8b8b8b; }
+
 footer {
    position: relative;
-   margin-top: 66px !important;
-   margin-bottom: 60px !important;
+   margin-top: 10px !important;
+   margin-bottom: 10px !important;
 }
 
 /* ------------------------------------------------------------------ */
