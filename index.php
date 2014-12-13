@@ -20,7 +20,7 @@ $app->get('/links', function () {
 $app->get('/albums/:id', function ($id) {
 	include 'db/create_menu.php';
 	include 'header.php';
-	include 'album.php'
+	//include 'album.php'
 	include 'footer.php';
 });
 
