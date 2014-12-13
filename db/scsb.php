@@ -76,7 +76,7 @@
 					<div class="accordion-toggle" style="display: table;">
 						<div class="tracks" style="width: 50px; text-align: center;">{$track['track_number']}</div>
 						<div class="tracks" style="width: 400px;">{$track['title']}</div>
-						<div class="tracks">{$track['song_length']}</div>
+						<div class="tracks" style="width: 100px;">{$track['song_length']}</div>
 					</div>
 					<div class="accordion-content">
 					{$lyrics_list[$i]}
