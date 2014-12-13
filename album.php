@@ -1,4 +1,4 @@
-<?php $album = $l->album_info($id); ?>
+<?php $album = $scsb->album_info($id); ?>
 	<article id="latest-article" class="container" style="min-height: 400px;">
 		  <h2><?=$album['title']?></h2>
 		  <h4><?=$album['sub_title']?></h4>
