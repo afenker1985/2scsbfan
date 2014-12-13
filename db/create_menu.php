@@ -19,15 +19,12 @@
 		if(!$result){
 		   echo $db->lastErrorMsg();
 		} else {
-			while($row=$result->fetchArray(SQLITE3_ASSOC)) {
-				print_r($row);
-			}
-			
 			$album_list = '';
-	/*		foreach ($result as $row) {
+			while($row=$result->fetchArray(SQLITE3_ASSOC)) {
 				$album_list .= '<li><a href="/albums/' . $row['slug'] . '"><span>- </span>' . $row['title'] . '</a></li>';
 			}
-			echo $album_list;*/
+			
+			echo $album_list;
 		}
 	
 		$db->close();
