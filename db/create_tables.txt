@@ -12,3 +12,21 @@ total_length INT(11) NOT NULL,
 is_active INT(1) default 1,
 creation_date TIMESTAMP default '0000-00-00 00:00:00' NOT NULL,
 last_modified TIMESTAMP default CURRENT_TIMESTAMP NOT NULL);
+
+CREATE TABLE lyrics (
+lyric_id INT(11) PRIMARY KEY NOT NULL,
+slug VAR(100) NULL,
+lyrics TEXT,
+is_active INT(11) default '1',
+creation_date TIMESTAMP default '0000-00-00 00:00:00' NOT NULL,
+last_modified timestam default CURRENT_TIMESTAMP NOT NULL);
+
+CREATE TABLE songs (
+song_id int(11) PRIMARY KEY NOT NULL,
+slug varchar(100) DEFAULT NULL,
+title varchar(100) DEFAULT NULL,
+track_number int(11) DEFAULT NULL,
+song_length int(11) DEFAULT NULL,
+is_active int(11) NOT NULL DEFAULT '1',
+creation_date timestamp DEFAULT '0000-00-00 00:00:00' NOT NULL,
+last_updated timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL);
