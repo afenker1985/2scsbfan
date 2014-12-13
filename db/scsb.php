@@ -30,6 +30,7 @@
 					}
 			
 				}
+				return $album;
 				$this->db->close();
 			}
 		}
