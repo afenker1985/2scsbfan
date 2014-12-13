@@ -45,7 +45,7 @@
 			echo "<pre>";
 			print_r($lyric_id);
 			
-			$res = $this->db->query("SELECT lyrics FROM lyrics WHERE lyric_id=". $lyric_id['lyric_id']);
+			$res = $this->db->querySingle("SELECT lyrics FROM lyrics WHERE lyric_id=". $lyric_id['lyric_id']);
 			
 			echo "LYRICS ";
 			print_r($res);
