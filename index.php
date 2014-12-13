@@ -4,7 +4,7 @@ $app = new \Slim\Slim();
 
 $app->get('/', function () {
 	$path = "/";
-	include 'db/2scsb.php';
+	include 'db/scsb.php';
 	$scsb = new scsb();
 	include 'header.php';
 	include 'welcome.php';
@@ -13,7 +13,7 @@ $app->get('/', function () {
 
 $app->get('/links', function () {
 	$path = "/";
-	include 'db/2scsb.php';
+	include 'db/scsb.php';
 	$scsb = new scsb();
 	include 'header.php';
 	include 'links.php';
@@ -22,7 +22,7 @@ $app->get('/links', function () {
 
 $app->get('/albums/:id', function ($id) {
 	$path = "../";
-	include 'db/2scsb.php';
+	include 'db/scsb.php';
 	$scsb = new scsb();
 	include 'header.php';
 	include 'album.php';
