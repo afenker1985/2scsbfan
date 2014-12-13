@@ -1,8 +1,10 @@
 <?php
 	class scsb_db {
+		$db;
+		
 		function __construct() {
 			include $_SERVER['DOCUMENT_ROOT'].'db/mydb.php';
-			$db = new MyDB();
+			$this->db = new MyDB();
 		}
 		
 		public function album_info() {
