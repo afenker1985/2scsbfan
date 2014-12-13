@@ -13,12 +13,12 @@
 		} else {
 			$album=$result->fetchArray(SQLITE3_ASSOC);
 			
-			echo intval(gmdate("g", $album['total_length']));
+			$length = intval(gmdate("g", $album['total_length']));
 			
-			if (intval(gmdate("g", $album['total_length'])) >= 1) {
+			if ($length == 1 || $length == 2) {
 				$t_length = gmdate("g:i:s", $album['total_length']);
 			} else {
-				$t_length = gmdate("i:s", $album['total_length']);
+				$t_length = gmdate("g:i:s", $album['total_length']);
 			}
 			
 		}
