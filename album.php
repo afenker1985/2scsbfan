@@ -1,8 +1,8 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'db/album_info.php'; ?>	
 	<article id="latest-article" class="container" style="min-height: 400px;">
 		  <h2><?=$row['title']?></h2>
-		  <?php if ($row['subtitle'] != 'NULL'): ?>
-			  <h4><?=$row['subtitle']?></h4>
+		  <?php if (is_null($row['sub_title'])): ?>
+			  <h4><?=$row['sub_title']?></h4>
 		  <?php endif; ?>
 		  <div class="dcontentc cf">
 			  <div class="album_info">
@@ -12,7 +12,7 @@
 				  <br />
 				  © <?=$row['copyright']?> <?=$row['label']?>
 				  <br />
-				  <strong>Album Length:</strong> <?=gmdate("H:i:s", $row['total_length'])?>
+				  <strong>Album Length:</strong> <?=$t_length?>
 			  </div>
 		  </div>
 	  </article>

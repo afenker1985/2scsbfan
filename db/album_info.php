@@ -12,6 +12,13 @@
 		   echo $db->lastErrorMsg();
 		} else {
 			$row=$result->fetchArray(SQLITE3_ASSOC);
+			
+			if (gmdate("g", $row['total_length']) == 1) {
+				$t_length = gmdate("g:i:s", $row['total_length'];
+			} else {
+				$t_length = gmdate("i:s", $row['total_length'];
+			}
+			
 		}
 	
 		$db->close();
