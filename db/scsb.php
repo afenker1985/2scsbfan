@@ -73,12 +73,12 @@
 				$track['song_length'] = ltrim(gmdate("i:s", $track['song_length']), 0);
 				
 				$t .=<<<EOHTML
-					<div class="accordion-toggle" style="display: table; border: 1px solid #000;">
+					<div class="accordion-toggle" style="display: table;">
 						<div class="tracks" style="width: 50px; text-align: center;">{$track['track_number']}</div>
 						<div class="tracks" style="width: 400px;">{$track['title']}</div>
 						<div class="tracks" style="width: 100px;">{$track['song_length']}</div>
 					</div>
-					<div class="accordion-content" style="border: 1px solid #000;">
+					<div class="accordion-content" style="padding-left: 50px;">
 					{$lyrics_list[$i]}
 					</div>
 EOHTML;
