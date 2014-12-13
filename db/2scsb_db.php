@@ -7,8 +7,29 @@
 			$this->db = new MyDB();
 		}
 		
-		public function album_info() {
+		public function album_info($id) {
+			if(!$db){
+			   echo $this->db->lastErrorMsg();
+			} else {
+
+				$result = $this->db->query("SELECT * FROM albums WHERE slug='" . $id . "'");
+	
+				if(!$result){
+				   echo $this->db->lastErrorMsg();
+				} else {
+					$album=$result->fetchArray(SQLITE3_ASSOC);
 			
+					$length = intval(gmdate("g", $album['total_length']));
+			
+					if ($length == 1 || $length == 2) {
+						$t_length = gmdate("g:i:s", $album['total_length']);
+					} else {
+						$t_length = gmdate("i:s", $album['total_length']);
+					}
+			
+				}
+				$db->close();
+			}
 		}
 		
 		public function create_menu() {
@@ -31,17 +52,6 @@
 				return $album_list;
 				$this->db->close();
 			}
-		}
-		
-		public function check_active() {
-			$file = $_SERVER['PHP_SELF'];
-			$break = Explode('/', $file);
-	
-			$pfile = $break[count($break) - 1];
-			
-			echo "<pre>";
-			var_dump($file);
-			echo "</pre>";
 		}
 		
 	}

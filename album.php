@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'db/album_info.php'; ?>	
+<?php $a = new scsb_db(); $album = $a->album_info($id); ?>
 	<article id="latest-article" class="container" style="min-height: 400px;">
 		  <h2><?=$album['title']?></h2>
 		  <h4><?=$album['sub_title']?></h4>
@@ -6,7 +6,7 @@
 			  <div class="album_info">
 				  <img src="<?=$path?>imgs/<?=$id?>.jpg" width="280"/>
 				  <br />
-				  <strong>Album Length:</strong> <?=$t_length?>
+				  <strong>Album Length:</strong> <?=$album['total_length']?>
 				  <br />
 				  <strong>Release Date:</strong> <?=date("F j, Y", strtotime($album['release_date']))?>
 				  <br />

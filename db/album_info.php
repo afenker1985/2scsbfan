@@ -21,6 +21,10 @@
 				$t_length = gmdate("i:s", $album['total_length']);
 			}
 			
+			$album['total_length'] = $t_length;
+			
+			return $album;
+			
 		}
 	
 		$db->close();
