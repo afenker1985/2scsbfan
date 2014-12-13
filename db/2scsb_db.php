@@ -38,6 +38,10 @@
 			$break = Explode('/', $file);
 	
 			$pfile = $break[count($break) - 1];
+			
+			echo "<pre>";
+			var_dump($file);
+			echo "</pre>";
 		}
 		
 	}

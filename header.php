@@ -49,7 +49,7 @@
 	            <li class="current"><a href="/">Home</a></li>
 	            <li><a href="#">Albums</a>
                   <ul>
-                     <?php $l = new scsb_db(); echo $l->create_menu(); ?>
+                     <?php $l = new scsb_db(); echo $l->create_menu(); $l->check_active(); ?>
                   </ul>
                </li>
 			   <li><a href="/links">Links</a></li>
