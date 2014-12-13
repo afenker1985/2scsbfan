@@ -1,6 +1,6 @@
 <?php
 	class scsb_db {
-		$db;
+		var $db;
 		
 		function __construct() {
 			include $_SERVER['DOCUMENT_ROOT'].'db/mydb.php';
