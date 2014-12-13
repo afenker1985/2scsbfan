@@ -37,11 +37,11 @@
 		}
 		
 		private function pull_lyrics($song_id) {
-			$result = $this->db->querySingle("SELECT * FROM song_lyrics WHERE song_id=" . $song_id);
+			$res = $this->db->querySingle("SELECT * FROM song_lyrics WHERE song_id=" . $song_id);
 			
-			$lyric_id = $result->fetchArray(SQLITE3_ASSOC);
+			$lyric_id = $res->fetchArray(SQLITE3_ASSOC);
 			
-			$result = $this->db->querySingle("SELECT lyrics FROM lyrics WHERE lyric_id=". $lyric_id['lyrics_id']);
+			$res = $this->db->querySingle("SELECT lyrics FROM lyrics WHERE lyric_id=". $lyric_id['lyrics_id']);
 						
 		}
 		
