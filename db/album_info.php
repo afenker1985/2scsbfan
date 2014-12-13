@@ -6,7 +6,7 @@
 		   $this->open($_ENV['OPENSHIFT_DATA_DIR'] . '/2scsb.db');
 	   }
 	}
-	echo $id;
+	echo "pass2";
 	$db = new MyDB();
 
 	if(!$db){
