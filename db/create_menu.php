@@ -13,7 +13,7 @@
 	   echo $db->lastErrorMsg();
 	} else {
 
-		$result = $db->query('SELECT slug, title FROM albums WHERE is_active=1 ORDER BY release_date DESC');
+		$result = $db->query('SELECT slug, title FROM albums WHERE is_active=1 ORDER BY release_date ASC');
 	
 		if(!$result){
 		   echo $db->lastErrorMsg();
