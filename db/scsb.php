@@ -47,6 +47,8 @@
 			$track_list = array();
 			$i = 0;
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+				var_dump($row);
+				
 				$r = $this->db->query("SELECT * FROM songs WHERE song_id=" . $row['song_id']);
 				
 				$track_list[$i] = $r;
