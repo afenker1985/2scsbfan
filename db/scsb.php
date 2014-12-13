@@ -52,6 +52,8 @@
 				
 				$track_list[$i] = $r;
 				
+				print_r($r);
+				
 				$i++;
 			}
 			
