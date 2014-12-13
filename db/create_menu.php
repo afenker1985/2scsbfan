@@ -14,7 +14,7 @@
 	   echo $db->lastErrorMsg();
 	} else {
 		$sql =<<<EOF
-			SELECT slug, title FROM albums WHERE is_active=1;
+			SELECT * FROM albums WHERE is_active=1 ORDER BY release_date ASC;
 EOF;
 
 		$result = $db->query($sql);
