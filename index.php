@@ -1,6 +1,6 @@
 <?php
 require 'Slim/autoload.php';
-require 'db/2scsb.php';
+include 'db/2scsb.php';
 $app = new \Slim\Slim();
 $scsb = new scsb();
 
