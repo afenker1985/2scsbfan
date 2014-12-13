@@ -53,7 +53,7 @@
 			}
 			
 			foreach($track_list as $track) {
-				$track['song_length'] = lrtim(gmdate("i:s", $track['song_length']), 0);
+				$track['song_length'] = ltrim(gmdate("i:s", $track['song_length']), 0);
 				$t .=<<<EOHTML
 					{$track['track_number']} {$track['title']} {$track['song_length']}
 				<br />
