@@ -41,8 +41,12 @@
 			
 			$lyric_id = $res->fetchArray(SQLITE3_ASSOC);
 			
+			echo "LYRICS ID ";
+			var_dump($lyric_id);
+			
 			$res = $this->db->query("SELECT lyrics FROM lyrics WHERE lyric_id=". $lyric_id['lyrics_id']);
 			
+			echo "LYRICS ";
 			var_dump($res);
 						
 		}
