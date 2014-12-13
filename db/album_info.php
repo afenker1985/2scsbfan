@@ -11,14 +11,14 @@
 		if(!$result){
 		   echo $db->lastErrorMsg();
 		} else {
-			$row=$result->fetchArray(SQLITE3_ASSOC);
+			$album=$result->fetchArray(SQLITE3_ASSOC);
 			
-			echo intval(gmdate("g", $row['total_length']));
+			echo intval(gmdate("g", $album['total_length']));
 			
-			if (intval(gmdate("g", $row['total_length'])) >= 1) {
-				$t_length = gmdate("g:i:s", $row['total_length']);
+			if (intval(gmdate("g", $album['total_length'])) >= 1) {
+				$t_length = gmdate("g:i:s", $album['total_length']);
 			} else {
-				$t_length = gmdate("i:s", $row['total_length']);
+				$t_length = gmdate("i:s", $album['total_length']);
 			}
 			
 		}
