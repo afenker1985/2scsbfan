@@ -26,7 +26,7 @@ EOF;
 			
 			$album_list = '';
 			foreach ($result as $row) {
-				$album_list .= '<li><a href="/albums/' . $row[0] . '"><span>- </span>' . $row[2] . '</a></li>'
+				$album_list .= '<li><a href="/albums/' . $row[0] . '"><span>- </span>' . $row[2] . '</a></li>';
 			}
 			print_r($album_list);
 		}
