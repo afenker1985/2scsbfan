@@ -30,3 +30,11 @@ song_length int(11) DEFAULT NULL,
 is_active int(11) NOT NULL DEFAULT '1',
 creation_date timestamp DEFAULT '0000-00-00 00:00:00' NOT NULL,
 last_updated timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL);
+
+CREATE TABLE album_songs (
+album_id int(11) NOT NULL,
+song_id int(11) NOT NULL);
+
+CREATE TABLE song_lyrics (
+song_id int(11) NOT NULL,
+lyric_id int(11) NOT NULL);
