@@ -34,7 +34,7 @@
 		}
 		
 		public function check_active() {
-			$file = $_SERVER["SCRIPT_NAME"];
+			$file = $_SERVER['REQUEST_URI'];
 			$break = Explode('/', $file);
 	
 			$pfile = $break[count($break) - 1];
