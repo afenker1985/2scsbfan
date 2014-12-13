@@ -36,6 +36,15 @@
 			}
 		}
 		
+		public function track_list($id) {
+			$result = $this->db->query("SELECT album_id FROM albums WHERE slug='" . $id . "'");
+			
+			$album_id = $result->fetchArray(SQLITE3_ASSOC);
+			
+			echo $album_id['album_id'];
+			
+		}
+		
 		public function create_menu() {
 			if(!$this->db){
 			   echo $this->db->lastErrorMsg();
