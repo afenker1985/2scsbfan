@@ -1,7 +1,7 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'db/album_info.php'; ?>	
 	<article id="latest-article" class="container" style="min-height: 400px;">
 		  <h2><?=$row['title']?></h2>
-		  <?php if (is_null($row['sub_title'])): ?>
+		  <?php if ($row['sub_title'] == NULL): ?>
 			  <h4><?=$row['sub_title']?></h4>
 		  <?php endif; ?>
 		  <div class="dcontentc cf">
