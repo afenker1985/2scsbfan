@@ -1,4 +1,3 @@
-<?php 	include $_SERVER['DOCUMENT_ROOT'].'db/create_menu.php'; ?>
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
@@ -50,7 +49,7 @@
 	            <li class="current"><a href="/">Home</a></li>
 	            <li><a href="#">Albums</a>
                   <ul>
-                     <?=$album_list?>
+                     <?php $l = new scsb_db(); echo $l->create_menu(); ?>
                   </ul>
                </li>
 			   <li><a href="/links">Links</a></li>
