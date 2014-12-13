@@ -5,11 +5,11 @@
 			$db = new MyDB();
 		}
 		
-		function album_info() {
+		public function album_info() {
 			
 		}
 		
-		function create_menu() {
+		public function create_menu() {
 			if(!$this->db){
 			   echo $this->db->lastErrorMsg();
 			} else {
@@ -28,9 +28,10 @@
 				
 				return $album_list;
 				$this->db->close();
+			}
 		}
 		
-		function check_active() {
+		public function check_active() {
 			$file = $_SERVER["SCRIPT_NAME"];
 			$break = Explode('/', $file);
 	
