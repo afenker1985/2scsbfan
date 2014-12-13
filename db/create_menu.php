@@ -14,7 +14,7 @@
 	   echo $db->lastErrorMsg();
 	} else {
 
-		$result = $db->query('SELECT slug, title FROM albums WHERE is_active=1');
+		$result = $db->query('SELECT slug, title FROM albums');
 	
 		if(!$result){
 		   echo $db->lastErrorMsg();
