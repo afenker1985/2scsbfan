@@ -1,4 +1,4 @@
-<?php $a = new scsb_db(); $album = $a->album_info($id); ?>
+<?php $album = $l->album_info($id); ?>
 	<article id="latest-article" class="container" style="min-height: 400px;">
 		  <h2><?=$album['title']?></h2>
 		  <h4><?=$album['sub_title']?></h4>
