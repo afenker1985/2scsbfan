@@ -15,7 +15,7 @@
 				  <strong>Copyright:</strong> <?=$album['copyright']?>, <?=$album['artist']?>
 			  </div>
 			  <div class="track_info">
-				  <div align="center">
+				  <div style="margin: 0 auto;">
 					  <?=$scsb->track_list($id)?>
 				  </div>
 			  </div>
