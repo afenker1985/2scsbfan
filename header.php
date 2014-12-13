@@ -15,6 +15,7 @@
    ================================================== -->
 		<link rel="stylesheet" href="<?=$path?>css/base.css">
 		<link rel="stylesheet" href="<?=$path?>css/layout.css">
+		<link rel="stylesheet" href="<?=$path?>css/my_layout.css">
 
 	<!--[if lt IE 9]>
 		<src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
