@@ -14,7 +14,7 @@
 	   echo $db->lastErrorMsg();
 	} else {
 		$sql =<<<EOF
-			SELECT * FROM albums WHERE is_active=1 ORDER BY release_date ASC;
+			SELECT slug, title FROM albums WHERE is_active=1 ORDER BY release_date ASC;
 EOF;
 
 		$result = $db->query($sql);
@@ -22,7 +22,7 @@ EOF;
 		if(!$result){
 		   echo $db->lastErrorMsg();
 		} else {
-			print_r($result->fetchArray(SQLITE3_ASSOC));
+			print_r($result->fetchArray());
 			
 			$album_list = '';
 			foreach ($result as $row) {
