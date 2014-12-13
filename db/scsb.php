@@ -21,15 +21,18 @@
 				} else {
 					$album=$result->fetchArray(SQLITE3_ASSOC);
 			
-					$length = intval(gmdate("g", $album['total_length']));
+					$length = intval(gmdate("G", $album['total_length']));
 			
-					if ($length == 1 || $length == 2) {
+					if ($length > 0) {
 						$t_length = gmdate("g:i:s", $album['total_length']);
 					} else {
 						$t_length = gmdate("i:s", $album['total_length']);
 					}
 			
 				}
+				
+				$album['total_length'] = $t_length;
+				
 				return $album;
 				$this->db->close();
 			}
