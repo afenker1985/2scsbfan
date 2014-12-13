@@ -43,12 +43,12 @@
 			
 			echo "LYRIC ID ";
 			echo "<pre>";
-			var_dump($lyric_id);
+			print_r($lyric_id);
 			
-			$res = $this->db->query("SELECT lyrics FROM lyrics WHERE lyric_id=". $lyric_id['lyrics_id']);
+			$res = $this->db->query("SELECT lyrics FROM lyrics WHERE lyric_id=". $lyric_id['lyric_id']);
 			
 			echo "LYRICS ";
-			var_dump($res);
+			print_r($res);
 			echo "</pre>";
 						
 		}
