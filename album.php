@@ -36,7 +36,7 @@
 				  <strong>Copyright:</strong> <?=$album['copyright']?>, <?=$album['artist']?>
 			  </div>
 			  <div class="track_info">
-				  <div style="display: inline-block; text-align: left;">
+				  <div id="accordion" style="display: inline-block; text-align: left;">
 					  <?=$scsb->track_list($id)?>
 				  </div>
 			  </div>
