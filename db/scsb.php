@@ -51,7 +51,7 @@
 				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);				
 				$i++;
 			}
-			$t = '';
+			
 			foreach($track_list as $track) {
 				$track['song_length'] = gmdate("i:s", $track['song_length']);
 				$t .=<<<EOHTML

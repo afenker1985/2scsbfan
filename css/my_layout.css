@@ -1,5 +1,6 @@
 .album_info {
 	float: left;
+	width: 300px;
 	padding-right: 20px;
 	padding-bottom: 50px;
 	border: 1px solid #000;
@@ -7,4 +8,5 @@
 
 .track_info {
 	border: 1px solid #000;
+	margin-left: 300px;
 }
