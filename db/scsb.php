@@ -52,7 +52,7 @@
 				
 				$track_list[$i] = $r;
 				
-				print_r($r);
+				print_r($row);
 				
 				$i++;
 			}
