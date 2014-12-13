@@ -6,11 +6,13 @@
 			  <div class="album_info">
 				  <img src="<?=$path?>imgs/<?=$id?>.jpg" width="280"/>
 				  <br />
+				  <strong>Album Length:</strong> <?=$t_length?>
+				  <br />
 				  <strong>Release Date:</strong> <?=date("F j, Y", strtotime($row['release_date']))?>
 				  <br />
-				  © <?=$row['copyright']?> <?=$row['label']?>
+				  <strong>Label:</strong> <?=$row['label']?>
 				  <br />
-				  <strong>Album Length:</strong> <?=$t_length?>
+				  <strong>Copyright:</strong>
 			  </div>
 		  </div>
 	  </article>
