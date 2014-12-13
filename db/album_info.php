@@ -6,7 +6,7 @@
 	   echo $db->lastErrorMsg();
 	} else {
 
-		$result = $db->query('SELECT * FROM albums WHERE slug=' . $id . ' ORDER BY release_date ASC');
+		$result = $db->query("SELECT * FROM albums WHERE slug='" . $id . "'");
 	
 		if(!$result){
 		   echo $db->lastErrorMsg();
