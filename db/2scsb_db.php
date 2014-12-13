@@ -34,7 +34,7 @@
 		}
 		
 		public function check_active() {
-			$file = $_SERVER['ORIG_PATH_INFO'];
+			$file = $_SERVER['SCRIPT_FILENAME'];
 			$break = Explode('/', $file);
 	
 			$pfile = $break[count($break) - 1];
