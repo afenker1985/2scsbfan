@@ -46,13 +46,17 @@
 			$i = 1;
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 				
-				$r = $this->db->query('SELECT * FROM (SELECT title, song_length, song_id FROM songs ORDER BY track_number) WHERE song_id=' . $row['song_id']);
+				$r = $this->db->query('SELECT * FROM (SELECT title, song_length, track_number, song_id FROM songs ORDER BY track_number) WHERE song_id=' . $row['song_id']);
 				
 				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);				
 				$i++;
 			}
-			
-			var_dump($track_list);
+			$t = '';
+			foreach($track_list as $track) {
+				$track['song_length'] = gmdate("i:s", $track['song_length']);
+				$t .= $track['track_number'] . " " . $track['title'] . " " $track['song_length'] . "<br />\n";
+				
+			}
 			
 		}
 		
