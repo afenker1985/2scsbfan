@@ -50,10 +50,7 @@
 				
 				$r = $this->db->query('SELECT title, track_number, song_length FROM songs WHERE song_id=' . $row['song_id']);
 				
-				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
-				
-				print_r($row);
-				
+				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);				
 				$i++;
 			}
 			
