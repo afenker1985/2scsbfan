@@ -4,10 +4,10 @@
 		
 		function __construct() {
 			include $_SERVER['DOCUMENT_ROOT'].'db/mydb.php';
+			$this->db = new MyDB();
 		}
 		
 		public function album_info($id) {
-			$this->db = new MyDB();
 			
 			if(!$this->db){
 			   echo $this->db->lastErrorMsg();
@@ -29,12 +29,11 @@
 					}
 			
 				}
-				$db->close();
+				$this->db->close();
 			}
 		}
 		
 		public function create_menu() {
-			$this->db = new MyDB();
 			if(!$this->db){
 			   echo $this->db->lastErrorMsg();
 			} else {
