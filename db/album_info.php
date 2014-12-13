@@ -11,11 +11,7 @@
 		if(!$result){
 		   echo $db->lastErrorMsg();
 		} else {
-			$album_list = '';
-			while($row=$result->fetchArray(SQLITE3_ASSOC)) {
-				print_r($row);
-			}
-
+			$row=$result->fetchArray(SQLITE3_ASSOC);
 		}
 	
 		$db->close();
