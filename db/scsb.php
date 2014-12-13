@@ -79,7 +79,7 @@
 						<div class="tracks">{$track['song_length']}</div>
 					</div>
 					<div class="accordion-content">
-					{$lyric_list[$i]}
+					{$lyrics_list[$i]}
 					</div>
 EOHTML;
 				$i++;
