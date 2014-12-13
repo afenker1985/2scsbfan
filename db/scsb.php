@@ -37,6 +37,7 @@
 		public function create_menu() {
 			echo "PASS2";
 			if(!$this->db){
+				echo "FAIL1";
 			   echo $this->db->lastErrorMsg();
 			} else {
 
@@ -44,6 +45,7 @@
 	
 				if(!$result){
 				   echo $this->db->lastErrorMsg();
+				   echo "FAIL2";
 				} else {
 					$album_list = '';
 					while($row=$result->fetchArray(SQLITE3_ASSOC)) {
@@ -51,7 +53,7 @@
 					}
 
 				}
-				
+				echo "ALBUM LIST: " . $album_list;
 				return $album_list;
 				$this->db->close();
 			}
