@@ -48,6 +48,7 @@
 			$i = 0;
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 				var_dump($row);
+				var_dump($result);
 				
 				$r = $this->db->query("SELECT * FROM songs WHERE song_id=" . $row['song_id']);
 				
