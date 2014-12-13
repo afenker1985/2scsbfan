@@ -43,7 +43,10 @@
 						
 			echo $album_id['album_id'];
 			
+			$result = '';
+			
 			$result = $this->db->query("SELECT * FROM album_songs WHERE album_id=" . $album_id['album_id']);
+			var_dump($result);
 			$track_list = array();
 			$i = 0;
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
