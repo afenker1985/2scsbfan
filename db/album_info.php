@@ -3,7 +3,6 @@
 	{
 	   function __construct()
 	   {
-		   echo "pass2";
 		   $this->open($_ENV['OPENSHIFT_DATA_DIR'] . '/2scsb.db');
 		   $this->lastErrorMsg();
 	   }
