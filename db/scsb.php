@@ -66,22 +66,21 @@
 							
 				$i++;
 			}
-			
+			$i=1;
 			foreach($track_list as $track) {
-				foreach($lyrics_list as $lyric) {
-					$track['song_length'] = ltrim(gmdate("i:s", $track['song_length']), 0);
-					
-					$t .=<<<EOHTML
-						<div class="accordion-toggle" style="display: table;">
-							<div class="tracks" style="width: 50px; text-align: center;">{$track['track_number']}</div>
-							<div class="tracks" style="width: 400px;">{$track['title']}</div>
-							<div class="tracks">{$track['song_length']}</div>
-						</div>
-						<div class="accordion-content">
-						{$lyric}
-						</div>
+				$track['song_length'] = ltrim(gmdate("i:s", $track['song_length']), 0);
+				
+				$t .=<<<EOHTML
+					<div class="accordion-toggle" style="display: table;">
+						<div class="tracks" style="width: 50px; text-align: center;">{$track['track_number']}</div>
+						<div class="tracks" style="width: 400px;">{$track['title']}</div>
+						<div class="tracks">{$track['song_length']}</div>
+					</div>
+					<div class="accordion-content">
+					{$lyric[$i]}
+					</div>
 EOHTML;
-				}
+				$i++;
 			}
 			
 			return $t;
