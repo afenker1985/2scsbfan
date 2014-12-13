@@ -66,7 +66,9 @@
 							
 				$i++;
 			}
-			$i=1;
+			
+			$i = 1;
+			
 			foreach($track_list as $track) {
 				$track['song_length'] = ltrim(gmdate("i:s", $track['song_length']), 0);
 				
@@ -77,7 +79,7 @@
 						<div class="tracks">{$track['song_length']}</div>
 					</div>
 					<div class="accordion-content">
-					{$lyric[$i]}
+					{$lyric_list[$i]}
 					</div>
 EOHTML;
 				$i++;
