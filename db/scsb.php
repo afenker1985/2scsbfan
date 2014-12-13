@@ -36,6 +36,17 @@
 			}
 		}
 		
+		private function pull_lyrics($song_id) {
+			$result = $this->db->querySingle("SELECT * FROM song_lyrics WHERE song_id=" . $song_id);
+			
+			$lyric_id = $result->fetchArray(SQLITE3_ASSOC);
+			
+			$result = $this->db->querySingle("SELECT lyrics FROM lyrics WHERE lyric_id=". . $lyric_id['lyrics_id']);
+			
+			var_dump($result);
+			
+		}
+		
 		public function track_list($id) {
 			$result = $this->db->query("SELECT album_id FROM albums WHERE slug='" . $id . "'");
 			
@@ -48,12 +59,16 @@
 				
 				$r = $this->db->query('SELECT * FROM (SELECT title, song_length, track_number, song_id FROM songs ORDER BY track_number) WHERE song_id=' . $row['song_id']);
 				
-				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);				
+				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
+				
+				$lyrics_list[$i] = $this->pull_lyrics($row['song_id'])
+							
 				$i++;
 			}
 			
 			foreach($track_list as $track) {
 				$track['song_length'] = ltrim(gmdate("i:s", $track['song_length']), 0);
+					
 				$t .=<<<EOHTML
 					<div style="display: table;">
 						<div class="tracks" style="width: 50px; text-align: center;">{$track['track_number']}</div>
