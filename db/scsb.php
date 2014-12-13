@@ -68,7 +68,7 @@
 			}
 			
 			foreach($track_list as $track) {
-				foreach($lyric_list as $lyric) {
+				foreach($lyrics_list as $lyric) {
 					$track['song_length'] = ltrim(gmdate("i:s", $track['song_length']), 0);
 					
 					$t .=<<<EOHTML
