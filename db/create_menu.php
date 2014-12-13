@@ -28,7 +28,7 @@ EOF;
 			foreach ($result as $row) {
 				$album_list .= '<li><a href="/albums/' . $row['slug'] . '"><span>- </span>' . $row['title'] . '</a></li>';
 			}
-			print_r($album_list);
+			echo $album_list;
 		}
 	
 		$db->close();
