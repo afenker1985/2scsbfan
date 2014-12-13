@@ -5,6 +5,7 @@
 		function __construct() {
 			include $_SERVER['DOCUMENT_ROOT'].'db/mydb.php';
 			$this->db = new MyDB();
+			echo "PASS";
 		}
 		
 		public function album_info($id) {
@@ -34,6 +35,7 @@
 		}
 		
 		public function create_menu() {
+			echo "PASS2";
 			if(!$this->db){
 			   echo $this->db->lastErrorMsg();
 			} else {
