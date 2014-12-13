@@ -40,8 +40,7 @@
 			$result = $this->db->query("SELECT album_id FROM albums WHERE slug='" . $id . "'");
 			
 			$album_id = $result->fetchArray(SQLITE3_ASSOC);
-			include 'scsb.php';
-			
+						
 			echo $album_id['album_id'];
 			
 			$result = $this->db->query("SELECT * FROM album_songs WHERE album_id=" . $album_id['album_id']);
