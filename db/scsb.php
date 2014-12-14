@@ -78,7 +78,7 @@
 						<div class="tracks" style="width: 400px;"><strong>{$track['title']}</strong></div>
 						<div class="tracks" style="width: 100px;"><strong>{$track['song_length']}</strong></div>
 					</div>
-					<div class="accordion-content">
+					<div class="accordion-content" style="padding-left: 10px;">
 					{$lyrics_list[$i]}
 					</div>
 EOHTML;
