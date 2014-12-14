@@ -14,3 +14,7 @@
 .tracks {
 	display: table-cell;
 }
+
+#track-list {
+	background: #fff url(../images/bg.png);
+}
