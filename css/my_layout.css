@@ -21,6 +21,5 @@
 }
 
 .accordion-content {
-	border-left: 1px solid #D5D5D7;	
-	border-right: 1px solid #D5D5D7;
+	border: 1px solid #D5D5D7;	
 }
