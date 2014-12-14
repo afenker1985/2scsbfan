@@ -24,7 +24,7 @@
 		  <h4><?=$album['sub_title']?></h4>
 		  <div class="dcontentc cf">
 			  <div class="album_info">
-				  <img src="<?=$path?>imgs/<?=$id?>.jpg" width="260"/>
+				  <img src="<?=$path?>imgs/<?=$id?>.jpg" width="280"/>
 				  <br />
 				  <strong>Album Length:</strong> <?=$album['total_length']?>
 				  <br />
