@@ -60,7 +60,7 @@
 			
 			$r = $this->db->query("SELECT * FROM `songs` WHERE `song_id`='83'");
 			
-							print_r($r);
+							print_r($r->fetchArray());
 			
 			echo "Error 1: " . $this->db->lastErrorMsg() . "<br />";
 			
