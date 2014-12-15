@@ -58,25 +58,12 @@
 			
 			$i = 1;
 			
-			$r = $this->db->query("SELECT * FROM songs WHERE song_id=83");
-			
-							print_r($r);
-			
-			echo "Error 1: " . $this->db->lastErrorMsg() . "<br />";
-			
-			while ($rw = $r->fetchArray(SQLITE3_ASSOC)) {
-				
-				print_r($r);
-				
-			}
-			
-			
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 								
-				$r = $this->db->query("SELECT * FROM `songs`");
+				$r = $this->db->query("SELECT title, song_length, track_number FROM songs WHERE song_id=" . $row['song_id'] . "ORDER BY track_number");
 				
 				if(!$r->fetchArray(SQLITE3_ASSOC)) {
-				   echo "Error 2: " . $this->db->lastErrorMsg() . "<br />";
+				   echo "Error 1: " . $this->db->lastErrorMsg() . "<br />";
 				} else {
 				
 				//$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
