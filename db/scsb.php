@@ -91,7 +91,7 @@
 				
 				$t .=<<<EOHTML
 				<!--	<div class="accordion-toggle" id="track-list" style="display: table;"> -->
-					<div id="tracklist" style="display: table;">
+					<div id="track-list" style="display: table;">
 						<div class="tracks" style="width: 50px; text-align: center;"><strong>{$track['track_number']}</strong></div>
 						<div class="tracks" style="width: 450px;"><strong>{$track['title']}</strong></div>
 						<div class="tracks" style="width: 100px;"><strong>{$track['song_length']}</strong></div>
