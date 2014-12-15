@@ -53,6 +53,7 @@
 			$album_id = $result->fetchArray(SQLITE3_ASSOC);
 			
 			$result = $this->db->query("SELECT * FROM album_songs WHERE album_id=" . $album_id['album_id']);
+			
 			$track_list = array();
 			$i = 1;
 			
@@ -65,7 +66,7 @@
 				} else {
 				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
 				
-				
+				$lyrics_list[$i] = $this->pull_lyrics($row['song_id']);
 				
 				echo '<pre>';
 				
@@ -75,10 +76,9 @@
 				
 				print_r($track_list[$i]);
 				
+				print_r($lyrics_list[$i]);
+				
 				echo '</pre>';
-				
-				
-				$lyrics_list[$i] = $this->pull_lyrics($row['song_id']);
 							
 				$i++;
 				}
@@ -90,14 +90,15 @@
 				$track['song_length'] = ltrim(gmdate("i:s", $track['song_length']), 0);
 				
 				$t .=<<<EOHTML
-					<div class="accordion-toggle" id="track-list" style="display: table;">
+				<!--	<div class="accordion-toggle" id="track-list" style="display: table;"> -->
+					<div id="tracklist" style="display: table;">
 						<div class="tracks" style="width: 50px; text-align: center;"><strong>{$track['track_number']}</strong></div>
 						<div class="tracks" style="width: 450px;"><strong>{$track['title']}</strong></div>
 						<div class="tracks" style="width: 100px;"><strong>{$track['song_length']}</strong></div>
 					</div>
-					<div class="accordion-content" style="padding-left: 10px;">
+					<!-- <div class="accordion-content" style="padding-left: 10px;">
 					{$lyrics_list[$i]}
-					</div>
+					</div> -->
 EOHTML;
 				$i++;
 			}
