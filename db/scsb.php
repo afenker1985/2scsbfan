@@ -68,7 +68,7 @@
 				   echo "<br />";
 				} else {
 				
-				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
+				$track_list[$i] = $r;
 				
 				$lyrics_list[$i] = $this->pull_lyrics($row['song_id']);
 							
