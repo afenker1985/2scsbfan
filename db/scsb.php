@@ -60,7 +60,7 @@
 			
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 				
-				print_r($row->fetchArray(SQLITE3_ASSOC));
+				print_r($row);
 				
 				$r = $this->db->query('SELECT * FROM (SELECT title, song_length, track_number, song_id FROM songs ORDER BY track_number) WHERE song_id=' . $row['song_id']);
 				
