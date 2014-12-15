@@ -60,10 +60,10 @@
 			
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 								
-				$r = $this->db->query("SELECT title, song_length, track_number FROM songs WHERE song_id=" . $row['song_id']);
+				$r = $this->db->query("SELECT title, song_length, track_number FROM songs WHERE song_id= " . $row['song_id']);
 				
 				if(!$r->fetchArray(SQLITE3_ASSOC)) {
-				   echo "Error 1: " . $this->db->lastErrorMsg() . "<br />";
+				   echo "Error # " . $this->db->lastErrorCode() . ": " . $this->db->lastErrorMsg() . "<br />";
 				} else {
 				
 				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
