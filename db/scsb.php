@@ -64,6 +64,7 @@
 				
 				if(!$r->fetchArray(SQLITE3_ASSOC)) {
 				   echo "Error # " . $this->db->lastErrorCode() . ": " . $this->db->lastErrorMsg() . "<br />";
+				   echo $r . "<br />";
 				} else {
 				
 				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
