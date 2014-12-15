@@ -64,9 +64,11 @@
 				
 				$r = $this->db->query('SELECT * FROM (SELECT title, song_length, track_number, song_id FROM songs ORDER BY track_number) WHERE song_id=' . $row['song_id']);
 				
+				print_r($r->fetchArray(SQLITE3_ASSOC));
+				
 				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
 				
-				$lyrics_list[$i] = $this->pull_lyrics($row['song_id']);
+				//$lyrics_list[$i] = $this->pull_lyrics($row['song_id']);
 							
 				$i++;
 			}
