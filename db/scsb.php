@@ -122,7 +122,7 @@ EOHTML;
 				if(!$result){
 				   echo $this->db->lastErrorMsg();
 				} else {
-					$album_list = '';
+					//$album_list = '';
 					while($row=$result->fetchArray(SQLITE3_ASSOC)) {
 						$album_list .= '<li><a href="/albums/' . $row['slug'] . '"><span>- </span>' . $row['title'] . '</a></li>';
 					}
