@@ -62,7 +62,12 @@
 				
 				$r = $this->db->query('SELECT * FROM (SELECT title, song_length, track_number, song_id FROM songs ORDER BY track_number) WHERE song_id=' . $row['song_id']);
 				
+				echo '<pre>';
+				print_r($r);
+				
 				print_r($r->fetchArray(SQLITE3_ASSOC));
+				
+				echo '</pre>';
 				
 				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
 				
