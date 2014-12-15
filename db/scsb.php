@@ -40,7 +40,6 @@
 			$res = $this->db->query("SELECT * FROM song_lyrics WHERE song_id=" . $song_id);
 			
 			$lyric_id = $res->fetchArray(SQLITE3_ASSOC);
-
 			
 			$res = $this->db->querySingle("SELECT lyrics FROM lyrics WHERE lyric_id=". $lyric_id['lyric_id']);
 			
@@ -61,6 +60,8 @@
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 								
 				$r = $this->db->query('SELECT * FROM (SELECT title, song_length, track_number, song_id FROM songs ORDER BY track_number) WHERE song_id=' . $row['song_id']);
+				
+				echo $this->db->lastErrorMsg();
 				
 				print_r($r->fetchArray(SQLITE3_ASSOC));
 				
