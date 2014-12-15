@@ -58,9 +58,9 @@
 			
 			$i = 1;
 			
-			$r = $this->db->query("SELECT * FROM `songs` WHERE `song_id`='83'");
+			$r = $this->db->querySingle("SELECT * FROM `songs` WHERE `song_id`='83'");
 			
-							print_r($r->fetchArray());
+							print_r($r);
 			
 			echo "Error 1: " . $this->db->lastErrorMsg() . "<br />";
 			
