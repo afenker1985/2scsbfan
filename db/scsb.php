@@ -58,6 +58,10 @@
 			
 			$i = 1;
 			
+			$r = $this->db->query("SELECT * FROM `songs`");
+			
+			print_r($r->fetchArray(SQLITE3_ASSOC));
+			
 			
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 				print_r($row);
@@ -68,23 +72,9 @@
 				   echo "Error 1: " . $this->db->lastErrorMsg() . "<br />";
 				} else {
 				
-				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
+				//$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
 				
 				//$lyrics_list[$i] = $this->pull_lyrics($row['song_id']);
-				
-				echo '<pre>';
-				
-				print_r($row);
-				
-				echo $this->db->lastErrorMsg();
-				
-				print_r($r->fetchArray(SQLITE3_ASSOC));
-				
-				print_r($track_list[$i]);
-				
-				print_r($lyrics_list[$i]);
-				
-				echo '</pre>';
 							
 				$i++;
 				}
