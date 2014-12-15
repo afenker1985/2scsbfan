@@ -77,9 +77,7 @@
 			}
 			
 			$i = 1;
-			
-			print_r($track_list);
-			
+						
 			foreach($track_list as $track) {
 				$track['song_length'] = ltrim(gmdate("i:s", $track['song_length']), 0);
 				
