@@ -65,10 +65,11 @@
 				} else {
 				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
 				
-				echo $this->db->lastErrorMsg();
+				
 				
 				echo '<pre>';
-				print_r($r);
+				
+				echo $this->db->lastErrorMsg();
 				
 				print_r($r->fetchArray(SQLITE3_ASSOC));
 				
