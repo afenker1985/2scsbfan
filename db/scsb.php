@@ -77,6 +77,8 @@
 			}
 			
 			$i = 1;
+			
+			$t = '';
 						
 			foreach($track_list as $track) {
 				
