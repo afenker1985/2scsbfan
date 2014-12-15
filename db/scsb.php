@@ -60,6 +60,8 @@
 			
 			$r = $this->db->query("SELECT * FROM `songs` WHERE `song_id`='83'");
 			
+							print_r($r);
+			
 			echo "Error 1: " . $this->db->lastErrorMsg() . "<br />";
 			
 			while ($rw = $r->fetchArray(SQLITE3_ASSOC)) {
