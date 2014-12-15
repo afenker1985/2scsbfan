@@ -66,9 +66,9 @@
 				   echo "Error 1: " . $this->db->lastErrorMsg() . "<br />";
 				} else {
 				
-				//$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
+				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
 				
-				//$lyrics_list[$i] = $this->pull_lyrics($row['song_id']);
+				$lyrics_list[$i] = $this->pull_lyrics($row['song_id']);
 							
 				$i++;
 				}
