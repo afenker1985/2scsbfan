@@ -58,7 +58,7 @@
 			
 			$i = 1;
 			
-			$r = $this->db->query("SELECT * FROM `songs`");
+			$r = $this->db->query("SELECT * FROM `songs` WHERE `song_id`=83");
 			
 			while ($rw = $r->fetchArray(SQLITE3_ASSOC)) {
 				
@@ -68,8 +68,7 @@
 			
 			
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-				print_r($row);
-				
+								
 				$r = $this->db->query("SELECT * FROM `songs`");
 				
 				if(!$r->fetchArray(SQLITE3_ASSOC)) {
