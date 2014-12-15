@@ -60,7 +60,11 @@
 			
 			$r = $this->db->query("SELECT * FROM `songs`");
 			
-			print_r($r->fetchArray(SQLITE3_ASSOC));
+			while ($rw = $r->fetchArray(SQLITE3_ASSOC)) {
+				
+				print_r($rw);
+				
+			}
 			
 			
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
