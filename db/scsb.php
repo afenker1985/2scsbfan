@@ -64,7 +64,7 @@
 			
 			while ($rw = $r->fetchArray(SQLITE3_ASSOC)) {
 				
-				print_r($rw);
+				print_r($r);
 				
 			}
 			
@@ -74,7 +74,7 @@
 				$r = $this->db->query("SELECT * FROM `songs`");
 				
 				if(!$r->fetchArray(SQLITE3_ASSOC)) {
-				   echo "Error 1: " . $this->db->lastErrorMsg() . "<br />";
+				   echo "Error 2: " . $this->db->lastErrorMsg() . "<br />";
 				} else {
 				
 				//$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
