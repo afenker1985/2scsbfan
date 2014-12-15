@@ -41,7 +41,7 @@
 			
 			$lyric_id = $res->fetchArray(SQLITE3_ASSOC);
 			
-			$res = $this->db->querySingle("SELECT lyrics FROM lyrics WHERE lyric_id=". $lyric_id['lyric_id']);
+			$res = $this->db->querySingle("SELECT lyrics FROM lyrics WHERE lyric_id=" . $lyric_id['lyric_id']);
 			
 			return $res;
 						
@@ -59,7 +59,7 @@
 			
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 				
-				$r = $this->db->query('SELECT * FROM (SELECT title, song_length, track_number, song_id FROM songs ORDER BY track_number) WHERE song_id=' . $row['song_id']);
+				$r = $this->db->query("SELECT * FROM (SELECT title, song_length, track_number, song_id FROM songs ORDER BY track_number) WHERE song_id=" . $row['song_id']);
 				if(!$r){
 				   echo $this->db->lastErrorMsg();
 				} else {
@@ -110,7 +110,7 @@ EOHTML;
 			   echo $this->db->lastErrorMsg();
 			} else {
 
-				$result = $this->db->query('SELECT slug, title FROM albums WHERE is_active=1 ORDER BY release_date ASC');
+				$result = $this->db->query("SELECT slug, title FROM albums WHERE is_active=1 ORDER BY release_date ASC");
 	
 				if(!$result){
 				   echo $this->db->lastErrorMsg();
