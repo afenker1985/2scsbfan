@@ -55,10 +55,12 @@
 			$result = $this->db->query("SELECT * FROM album_songs WHERE album_id=" . $album_id['album_id']);
 			
 			$track_list = array();
+			
 			$i = 1;
 			
 			
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+				print_r($row);
 				
 				$r = $this->db->query("SELECT `title`, `song_length`, `track_number` FROM `songs` WHERE `song_id`='" . $row['song_id'] . "';");
 				
