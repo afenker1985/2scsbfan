@@ -79,7 +79,8 @@
 			$i = 1;
 						
 			foreach($track_list as $track) {
-				$track['song_length'] = ltrim(gmdate("i:s", $track['song_length']), 0);
+				
+				$track['song_length'] = ($track['song_length'] < 60 ? gmdate("i:s", $track['song_length']) : ltrim(gmdate("i:s", $track['song_length']), 0) );
 				
 				$t .=<<<EOHTML
 				<!--	<div class="accordion-toggle" id="track-list" style="display: table;"> -->
