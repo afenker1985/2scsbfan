@@ -68,8 +68,6 @@
 				   echo "<br />";
 				} else {
 				
-					print_r($r);
-				
 				$track_list[$i] = $r;
 				
 				$lyrics_list[$i] = $this->pull_lyrics($row['song_id']);
@@ -79,6 +77,8 @@
 			}
 			
 			$i = 1;
+			
+			print_r($track_list);
 			
 			foreach($track_list as $track) {
 				$track['song_length'] = ltrim(gmdate("i:s", $track['song_length']), 0);
