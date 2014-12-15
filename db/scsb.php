@@ -68,6 +68,8 @@
 				   echo "<br />";
 				} else {
 				
+					print_r($r);
+				
 				$track_list[$i] = $r;
 				
 				$lyrics_list[$i] = $this->pull_lyrics($row['song_id']);
