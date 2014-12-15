@@ -60,7 +60,7 @@
 			
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 								
-				$r = $this->db->querySingle("SELECT title, song_length, track_number FROM songs WHERE song_id= " . $row['song_id']);
+				$r = $this->db->query("SELECT title, song_length, track_number FROM songs WHERE song_id= " . $row['song_id']);
 				
 				if(!$r) {
 				   echo "Error # " . $this->db->lastErrorCode() . ": " . $this->db->lastErrorMsg() . "<br />";
@@ -68,7 +68,7 @@
 				   echo "<br />";
 				} else {
 				
-				$track_list[$i] = $r;
+				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
 				
 				$lyrics_list[$i] = $this->pull_lyrics($row['song_id']);
 							
