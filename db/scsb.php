@@ -88,10 +88,15 @@
 						<div class="tracks" style="width: 500px;"><strong>{$track['title']}</strong></div>
 						<div class="tracks" style="width: 50px;"><strong>{$track['song_length']}</strong></div>
 					</div>
-					<div class="accordion-content" style="padding-left: 10px;">
-					{$lyrics_list[$i]}
-					</div>
 EOHTML;
+
+				if ($lyrics_list[$i] != '') {
+					$t .=<<<EOHTML
+						<div class="accordion-content" style="padding-left: 10px;">
+						{$lyrics_list[$i]}
+						</div>
+EOHTML;
+				}
 				$i++;
 			}
 			
