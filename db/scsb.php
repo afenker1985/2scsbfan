@@ -61,14 +61,18 @@
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 				
 				$r = $this->db->query("SELECT * FROM (SELECT title, song_length, track_number, song_id FROM songs ORDER BY track_number) WHERE song_id=" . $row['song_id']);
+				
 				if(!$r){
 				   echo $this->db->lastErrorMsg();
 				} else {
+				
 				$track_list[$i] = $r->fetchArray(SQLITE3_ASSOC);
 				
 				$lyrics_list[$i] = $this->pull_lyrics($row['song_id']);
 				
 				echo '<pre>';
+				
+				print_r($row);
 				
 				echo $this->db->lastErrorMsg();
 				
