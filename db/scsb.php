@@ -39,6 +39,8 @@
 		private function pull_lyrics($song_id) {
 			$res = $this->db->query("SELECT * FROM song_lyrics WHERE song_id=" . $song_id);
 			
+			echo $song_id;
+			
 			$lyric_id = $res->fetchArray(SQLITE3_ASSOC);
 			
 			$res = $this->db->querySingle("SELECT lyrics FROM lyrics WHERE lyric_id=" . $lyric_id['lyric_id']);
@@ -60,7 +62,7 @@
 			
 			while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
 								
-				$r = $this->db->query("SELECT title, song_length, track_number FROM songs WHERE is_active = 1 AND song_id= " . $row['song_id']);
+				$r = $this->db->query("SELECT title, song_length, track_number FROM songs WHERE song_id= " . $row['song_id']);
 				
 				if(!$r) {
 				   echo "Error # " . $this->db->lastErrorCode() . ": " . $this->db->lastErrorMsg() . "<br />";
