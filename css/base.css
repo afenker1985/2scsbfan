@@ -553,7 +553,7 @@ legend span {
 /* ------------------------------------------------------------------ */
 
 .container {
-   width: 1050px; /*orig 956px*/
+   width: 956px; /*orig 956px*/
    margin: 0 auto;
    padding: 0;
 }
@@ -587,7 +587,7 @@ legend span {
 .grid9  { width: 710px; }
 .grid10 { width: 792px; }
 .grid11 { width: 874px; }
-.grid12 { width: 1050px; } /*orig 956px*/
+.grid12 { width: 956px; } /*orig 956px*/
 
 .first { margin-left: 0; clear: left; }
 
