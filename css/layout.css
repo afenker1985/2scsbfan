@@ -30,7 +30,7 @@
    border-bottom: 1px solid #dcdddf;
    margin: 0;
    padding: 0;
-   width: 1050px; /*orig 100% */
+   width: 100%;
 }
 header {
    position: relative;
