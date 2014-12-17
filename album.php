@@ -7,12 +7,12 @@
       $(this).next().slideToggle('slow');
 
       //Hide the other panels
-      $(".accordion-content").not($(this).next()).slideUp('fast');
+      $(".accordion-content").not($(this).next()).slideUp('slow');
 
     });
 	
 	$('#accordion').find('.accordion-content').click(function(){
-		$(".accordion-content").slideUp('fast');
+		$(".accordion-content").slideUp('slow');
 	});
   });
 </script>
