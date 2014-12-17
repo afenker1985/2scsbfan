@@ -20,7 +20,7 @@
 <!-- CSS -->
 <style>
   .accordion-toggle {cursor: pointer;}
-  .accordion-content {display: none;}
+  .accordion-content {display: pointer;}
 </style>
 <?php $album = $scsb->album_info($id); ?>
 	<article id="latest-article" class="container" style="min-height: 400px;">
