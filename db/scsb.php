@@ -41,7 +41,7 @@
 			
 			echo $song_id . "<br />";
 			
-			echo $res . "<br />";
+			print_r($res) . "<br />";
 			
 			$lyric_id = $res->fetchArray(SQLITE3_ASSOC);
 			
