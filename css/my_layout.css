@@ -27,3 +27,7 @@
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
+
+.accordion-content hr {
+	width: 50%;
+}
