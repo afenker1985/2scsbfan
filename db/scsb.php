@@ -38,14 +38,13 @@
 		
 		private function pull_lyrics($song_id) {
 			$res = $this->db->query("SELECT * FROM song_lyrics WHERE song_id=" . $song_id);
+			echo $this->db->lastErrorMsg() . "<br />";
 			
 			echo "Song ID: "$song_id . "<br />";
 			
-			print_r($res->fetchArray());
-			
 			$lyric_id = $res->fetchArray(SQLITE3_ASSOC);
 			
-			echo $this->db->lastErrorMsg();
+			echo $this->db->lastErrorMsg() . "<br />";
 			
 			$res = $this->db->querySingle("SELECT lyrics FROM lyrics WHERE lyric_id=" . $lyric_id['lyric_id']);
 			
