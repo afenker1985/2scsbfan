@@ -10,6 +10,10 @@
       $(".accordion-content").not($(this).next()).slideUp('fast');
 
     });
+	
+	$('#accordion').find('.accordion-content').click(function(){
+		$(".accordion-content").$(this).next().slideUp('fast');
+	});
   });
 </script>
 
