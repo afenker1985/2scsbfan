@@ -40,7 +40,7 @@
 			$res = $this->db->query("SELECT * FROM song_lyrics WHERE song_id=" . $song_id);
 			echo $this->db->lastErrorMsg() . "<br />";
 			
-			echo "Song ID: "$song_id . "<br />";
+			echo "Song ID: " . $song_id . "<br />";
 			
 			$lyric_id = $res->fetchArray(SQLITE3_ASSOC);
 			
