@@ -12,7 +12,7 @@
     });
 	
 	$('#accordion').find('.accordion-content').click(function(){
-		$(".accordion-content").$(this).next().slideUp('fast');
+		$(".accordion-content").slideUp('fast');
 	});
   });
 </script>
