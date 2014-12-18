@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="<?=$path?>css/base.css">
 		<link rel="stylesheet" href="<?=$path?>css/layout.css">
 		<link rel="stylesheet" href="<?=$path?>css/my_layout.css">
+		<link href="<?=$path?>js/jquery.zglossary.min.css" rel="stylesheet" type="text/css" />
 
 	<!--[if lt IE 9]>
 		<src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,6 +28,14 @@
 		<!--   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script> -->
 
 		<script src="<?=$path?>js/custom.js"></script>
+		<script src="<?=$path?>js/jquery.zglossary.min.js" type="text/javascript"></script>
+		<script>
+		$(document).ready(function () {
+		    &('body').glossary('<?=$path?>js/terms.json', {
+		    	ignorecase: false
+		    });
+		});
+		</script>
 
 </head>
 
