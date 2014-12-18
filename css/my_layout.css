@@ -36,7 +36,8 @@
 }
 
 span.unknown {
-	display: inline-block;
+	display: block;
+	position: relative;
 	text-decoration: underline;
 	font-style: oblique;
 	-webkit-transform: skewx(15deg);
