@@ -31,7 +31,7 @@
 		<script src="<?=$path?>js/jquery.zglossary.min.js" type="text/javascript"></script>
 		<script>
 		$(document).ready(function () {
-		    &('body').glossary('<?=$path?>js/terms.json', {
+		    $('body').glossary('<?=$path?>js/terms.json', {
 		    	ignorecase: false
 		    });
 		});
