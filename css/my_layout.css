@@ -36,11 +36,10 @@
 }
 
 span.unknown {
-	display: flex;
-	text-decoration: underline;
+	/*text-decoration: underline;
 	font-style: oblique;
 	-webkit-transform: skewx(15deg);
 	-moz-transform: skewx(15deg);
 	-o-transform: skewx(15deg);
-	transform: skewx(15deg);
+	transform: skewx(15deg);*/
 }
