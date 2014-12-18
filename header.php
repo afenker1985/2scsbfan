@@ -32,7 +32,8 @@
 		<script>
 		$(document).ready(function () {
 		    $('body').glossary('<?=$path?>js/terms.json', {
-		    	ignorecase: false
+		    	ignorecase: false,
+				showonce: true
 		    });
 		});
 		</script>
