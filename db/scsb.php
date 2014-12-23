@@ -84,6 +84,15 @@
 				
 				$track['song_length'] = ($track['song_length'] < 60 ? gmdate("0:s", $track['song_length']) : ltrim(gmdate("i:s", $track['song_length']), 0) );
 				
+				if ($lyrics_list[$i] == '') {
+					$t .=<<<EOHTML
+						<div id="track-list" style="display: table;">
+							<div class="tracks" style="width: 50px; text-align: center;"><strong>{$track['track_number']}</strong></div>
+							<div class="tracks" style="width: 450px;"><strong>{$track['title']}</strong></div>
+							<div class="tracks" style="width: 50px;"><strong>{$track['song_length']}</strong></div>
+						</div>
+EOHTML;
+				} else {
 				$t .=<<<EOHTML
 					<div class="accordion-toggle" id="track-list" style="display: table;">
 						<div class="tracks" style="width: 50px; text-align: center;"><strong>{$track['track_number']}</strong></div>
@@ -94,6 +103,8 @@
 						{$lyrics_list[$i]}
 					</div>
 EOHTML;
+				}
+				
 				$i++;
 			}
 			
