@@ -2,10 +2,9 @@
 require 'vendor/autoload.php';
 $app = new \Slim\Slim();
 
-$app->notFound(function() use($app) {
-	echo "PASS";
-	$app->response()->redirect('/404');
-});
+//$app->notFound(function() use($app) {
+//	$app->response()->redirect('/404');
+//});
 
 $app->get('/404', function() {
 	$path = "/";
@@ -43,6 +42,5 @@ $app->get('/albums/:id', function ($id) {
 	include 'footer.php';
 });
 
-$app-run();
-
+$app->run();
 ?>
