@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="<?=$path?>css/base.css">
 		<link rel="stylesheet" href="<?=$path?>css/layout.css">
 		<link rel="stylesheet" href="<?=$path?>css/my_layout.css">
-		<link href="<?=$path?>js/jquery.zglossary.min.css" rel="stylesheet" type="text/css" />
+		<link href="<?=$path?>js/jquery.zglossary.css" rel="stylesheet" type="text/css" />
 
 	<!--[if lt IE 9]>
 		<src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

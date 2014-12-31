@@ -28,7 +28,7 @@ a.glossaryTerm:hover { border-bottom: none; text-decoration: none; }
 
 #glossaryContent {
 	text-align: justify;
-	font-size: 11px;
+	font-size: 13px;
 	line-height: 125%;
 	padding: 1em;
 	background-color: #fff;
@@ -36,7 +36,7 @@ a.glossaryTerm:hover { border-bottom: none; text-decoration: none; }
 }
 #glossaryContent h6 {
 	margin: 0 0 0.6em;
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: bold;
 }
 #glossaryContent p { margin: 0; }
