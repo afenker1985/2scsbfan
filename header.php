@@ -28,7 +28,7 @@
 		<!--   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script> -->
 
 		<script src="<?=$path?>js/custom.js"></script>
-		<script src="<?=$path?>js/jquery.zglossary.min.js" type="text/javascript"></script>
+		<script src="<?=$path?>js/jquery.zglossary.js" type="text/javascript"></script>
 		<script>
 		$(document).ready(function () {
 		    $('body').glossary('<?=$path?>js/terms.json', {
