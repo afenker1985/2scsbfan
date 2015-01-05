@@ -35,7 +35,7 @@
 			$.each(options.excludetags, function(i,e) { options.excludetags[i] = e.toUpperCase(); });
 
 			// Function to find and add term
-			var _addTerm = function(e, term, type, word, def) {
+			var _addTerm = function(e, term, word, type, def) {
 				var patfmt = term;
 				var skip = 0;
 
