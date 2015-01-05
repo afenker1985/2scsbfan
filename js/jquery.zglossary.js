@@ -139,7 +139,7 @@
 
 							// Find term in text
 							var item = data[i];
-							_addTerm(e, item.term, item.type, item.definition);
+							_addTerm(e, item.term, item.word, item.type, item.definition);
 						}
 					}
 				},
