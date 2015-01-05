@@ -35,7 +35,7 @@
 			$.each(options.excludetags, function(i,e) { options.excludetags[i] = e.toUpperCase(); });
 
 			// Function to find and add term
-			var _addTerm = function(e, term, type, def) {
+			var _addTerm = function(e, term, type, word, def) {
 				var patfmt = term;
 				var skip = 0;
 
@@ -68,7 +68,7 @@
 								spannode.title = 'Click for \''+ term +'\' definition';
 								spannode.className = 'glossaryTerm';
 								$(spannode).click(function(e) {
-									$.glossaryTip('<'+ options.tiptag +'>'+ term + '</'+ options.tiptag +'><p>'+ def +'</p>', {mouse_event: e})
+									$.glossaryTip('<'+ options.tiptag +'>'+ word + '</'+ options.tiptag +'><p>'+ def +'</p>', {mouse_event: e})
 									return false;
 								});
 							} else if (type == '1') {
