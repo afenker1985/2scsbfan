@@ -35,7 +35,7 @@
 			$.each(options.excludetags, function(i,e) { options.excludetags[i] = e.toUpperCase(); });
 
 			// Function to find and add term
-			var _addTerm = function(e, term, word, type, def) {
+			var _addTerm = function(e, term, tword, type, def) {
 				var patfmt = term;
 				var skip = 0;
 
@@ -68,7 +68,7 @@
 								spannode.title = 'Click for \''+ term +'\' definition';
 								spannode.className = 'glossaryTerm';
 								$(spannode).click(function(e) {
-									$.glossaryTip('<'+ options.tiptag +'>'+ word + '</'+ options.tiptag +'><p>'+ def +'</p>', {mouse_event: e})
+									$.glossaryTip('<'+ options.tiptag +'>'+ tword + '</'+ options.tiptag +'><p>'+ def +'</p>', {mouse_event: e})
 									return false;
 								});
 							} else if (type == '1') {
@@ -110,7 +110,7 @@
 					// Search child nodes
 					for (var i = 0; i < e.childNodes.length; ++i) {
 
-						var ret = _addTerm(e.childNodes[i], term, type, def);
+						var ret = _addTerm(e.childNodes[i], term, tword, type, def);
 
 						// If term found and show once option go to next term
 						if (options.showonce && ret == 1) {
@@ -139,7 +139,7 @@
 
 							// Find term in text
 							var item = data[i];
-							_addTerm(e, item.term, item.word, item.type, item.definition);
+							_addTerm(e, item.term, item.tword, item.type, item.definition);
 						}
 					}
 				},

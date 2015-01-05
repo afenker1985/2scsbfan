@@ -1,25 +1,25 @@
 [
    {
        "term":"ticerdolerreou",
-	   "word":"Tic Douloureux:",
+	   "tword":"Tic Douloureux:",
        "type":"0",
        "definition":"A severe, stabbing pain to one side of the face, possibly causing uncontrolable wincing."
    },
    {
        "term":"goober peas",
-	   "word":"Goober Peas:",
+	   "tword":"Goober Peas:",
        "type":"0",
        "definition":"Boiled peanuts."
    },
    {
 	   "term":"wellumscope",
-	   "word":,"Wellumscope: "
+	   "tword":,"Wellumscope: "
 	   "type":"0",
 	   "definition":""
    },
    {
 	   "term":"In forma pauperis",
-	   "word":"In forma pauperis: ",
+	   "tword":"In forma pauperis: ",
 	   "type":"0",
 	   "definition":"In the way of a beggar."
    }
